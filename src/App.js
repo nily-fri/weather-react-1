@@ -14,6 +14,7 @@ function App() {
             <a
               href="https://github.com/nily-fri?tab=repositories"
               target="_blank"
+              rel="noreferrer"
             >
               Nily Friedman
             </a>
