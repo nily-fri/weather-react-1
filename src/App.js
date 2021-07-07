@@ -5,7 +5,7 @@ import Search from "./Search";
 function App() {
   return (
     <div className="App">
-      <div className="App">
+      <div className="App Container">
         <h1>Weather App</h1>
         <Search />
         <footer>
