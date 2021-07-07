@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
-import Search from "./Search";
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <div className="App Container">
-        <h1>Weather App</h1>
-        <Search />
+        <Weather />
         <footer>
           <p>
             Coded by{" "}
