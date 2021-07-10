@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div className="weather container ">
+    <div className="weather card-body">
       <h1>Tel Aviv</h1>
       <h2>Sat, Jul 10</h2>
       <div className="search-city">
@@ -30,7 +30,7 @@ export default function Weather() {
         </form>
       </div>
       <div className="row exact-conditions">
-        <div className="col-6">
+        <div className="col-4">
           <ul>
             <li>Clear</li>
             <li>
@@ -45,7 +45,7 @@ export default function Weather() {
             </li>
           </ul>
         </div>
-        <div className="col-6">
+        <div className="col-4">
           <img
             src="https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1-1-580x386.jpg"
             alt="sun-icon"

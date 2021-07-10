@@ -10,9 +10,13 @@
 .weather h1 {
   display: block;
   font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
-h2 {
+.weather h2 {
   display: block;
   font-size: 20px;
   position: relative;
@@ -21,7 +25,7 @@ h2 {
 
 .search-city {
   position: relative;
-  left: 172px;
+  left: 400px;
   bottom: 79px;
   margin-left: 42px;
 }
@@ -31,7 +35,11 @@ h2 {
   left: 184px;
   bottom: 24px;
 }
-
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  margin: 0 40px;
+}
 .pin-icon {
   position: relative;
   left: 184px;
@@ -41,7 +49,6 @@ h2 {
 .exact-conditions {
   margin-top: -44px;
 }
-
 .today-temp {
   position: relative;
   bottom: 81px;
@@ -79,10 +86,6 @@ img.small-icon {
   width: 20px;
   position: relative;
   left: 0;
-}
-
-.week {
-  margin: -58px 0 17px 3px;
 }
 
 .col-2 {
