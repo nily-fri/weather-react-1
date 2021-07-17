@@ -12,18 +12,18 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
+      date: "Sat, Jul 17",
       city: response.data.name,
+      iconUrl:
+        "https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1-1-580x386.jpg",
     });
   }
-  const apiKey = "2f414cfeda6c23227c61d396f90f0949";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
 
   if (weatherData.ready) {
     return (
       <div className="weather card-body">
         <h1>{weatherData.city}</h1>
-        <h2>Sat, Jul 10</h2>
+        <h2>{weatherData.date}</h2>
         <div className="search-city">
           <form>
             <div>
@@ -50,8 +50,7 @@ export default function Weather(props) {
         <div className="row exact-conditions">
           <div className="col-4">
             <ul>
-              <li>{weatherData.description}</li>
-
+              <li className="text-capitalize">{weatherData.description}</li>
               <li>
                 Humidity: <span>{weatherData.humidity}</span>%
               </li>
@@ -63,12 +62,15 @@ export default function Weather(props) {
           </div>
           <div className="col-4">
             <img
-              src="https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1-1-580x386.jpg"
+              src={weatherData.iconUrl}
               alt="sun-icon"
               className="big-icon"
             />
             <div className="today-temp">
-              <span className="exact-temp"> {weatherData.temperature}°</span>
+              <span className="exact-temp">
+                {" "}
+                {Math.round(weatherData.temperature)}°
+              </span>
               <span className="degrees">
                 <a href="/">C</a> |<a href="/">F</a>
               </span>
@@ -81,6 +83,11 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    const apiKey = "2dea068a350b4b6ca3dce230cd14e272";
+    let city = "London";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
     return "Loading...";
   }
 }
