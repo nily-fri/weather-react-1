@@ -14,6 +14,9 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       date: "Sat, Jul 17",
       city: response.data.name,
+      max: response.data.main.temp_max,
+      min: response.data.main.temp_min,
+      feelsLike: response.data.main.feels_like,
       iconUrl:
         "https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1-1-580x386.jpg",
     });
@@ -54,9 +57,9 @@ export default function Weather(props) {
               <li>
                 Humidity: <span>{weatherData.humidity}</span>%
               </li>
-              <li>Wind: {weatherData.wind} km/h</li>
+              <li>Wind: {Math.round(weatherData.wind)} km/h</li>
               <li>
-                Feels like <span>29</span>°
+                Feels like <span>{Math.round(weatherData.feelsLike)}</span>°
               </li>
             </ul>
           </div>
@@ -75,7 +78,8 @@ export default function Weather(props) {
                 <a href="/">C</a> |<a href="/">F</a>
               </span>
               <p>
-                <strong>31°</strong> / 15°
+                <strong>{Math.round(weatherData.max)}°</strong> /{" "}
+                {Math.round(weatherData.min)}°
               </p>
             </div>
           </div>
@@ -84,8 +88,7 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "2dea068a350b4b6ca3dce230cd14e272";
-    let city = "London";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
