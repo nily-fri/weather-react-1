@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Weather.css";
+import FixedDate from "./FixedDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -12,7 +13,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
-      date: "Sat, Jul 17",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
@@ -26,7 +27,9 @@ export default function Weather(props) {
     return (
       <div className="weather card-body">
         <h1>{weatherData.city}</h1>
-        <h2>{weatherData.date}</h2>
+        <h2>
+          <FixedDate date={weatherData.date} />
+        </h2>
         <div className="search-city">
           <form>
             <div>
