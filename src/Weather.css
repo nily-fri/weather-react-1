@@ -71,9 +71,9 @@ li {
   list-style: none;
 }
 
-a {
+.degrees a {
   text-decoration: none;
-  color: black;
+  color: #7ea7e3;
 }
 
 .big-icon canvas {
