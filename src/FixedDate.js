@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function FixedDate(props) {
-  console.log(props.date);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let months = [
     "Jan",

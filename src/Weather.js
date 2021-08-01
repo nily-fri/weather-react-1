@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import FixedDate from "./FixedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -53,40 +54,7 @@ export default function Weather(props) {
             </div>
           </form>
         </div>
-        <div className="row exact-conditions">
-          <div className="col-4">
-            <ul>
-              <li className="text-capitalize">{weatherData.description}</li>
-              <li>
-                Humidity: <span>{weatherData.humidity}</span>%
-              </li>
-              <li>Wind: {Math.round(weatherData.wind)} km/h</li>
-              <li>
-                Feels like <span>{Math.round(weatherData.feelsLike)}</span>°
-              </li>
-            </ul>
-          </div>
-          <div className="col-4">
-            <img
-              src={weatherData.iconUrl}
-              alt="sun-icon"
-              className="big-icon"
-            />
-            <div className="today-temp">
-              <span className="exact-temp">
-                {" "}
-                {Math.round(weatherData.temperature)}°
-              </span>
-              <span className="degrees">
-                <a href="/">C</a> |<a href="/">F</a>
-              </span>
-              <p>
-                <strong>{Math.round(weatherData.max)}°</strong> /{" "}
-                {Math.round(weatherData.min)}°
-              </p>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
