@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 export default function FixedDate(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
