@@ -76,9 +76,9 @@ a {
   color: black;
 }
 
-img.big-icon {
-  width: 80px;
-  padding-bottom: 20px;
+.big-icon canvas {
+  width: 58px;
+  padding-bottom: 9px;
   padding-right: 5px;
 }
 

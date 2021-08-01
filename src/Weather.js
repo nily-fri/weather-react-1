@@ -20,8 +20,7 @@ export default function Weather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       feelsLike: response.data.main.feels_like,
-      iconUrl:
-        "https://www.creativefabrica.com/wp-content/uploads/2020/04/21/sun-Icon-Vector-thin-line-Graphics-3920713-1-1-580x386.jpg",
+      icon: response.data.weather[0].icon,
     });
   }
 
