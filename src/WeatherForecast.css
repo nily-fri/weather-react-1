@@ -5,3 +5,7 @@
 .forecast-max {
   font-weight: 800;
 }
+
+.forecast-day {
+  margin: 5px;
+}
