@@ -5,8 +5,8 @@ import "./Weather.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App container">
+    <div className="App container">
+      <div>
         <Weather defaultCity="London" />
         <footer>
           <p>
