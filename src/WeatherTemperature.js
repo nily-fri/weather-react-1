@@ -24,7 +24,8 @@ export default function WeatherTemperature(props) {
           </a>
         </span>
         <p>
-          <strong>{Math.round(props.max)}°</strong> / {Math.round(props.min)}°
+          <span>{Math.round(props.max)}°</span> /{" "}
+          <span className="today-min">{Math.round(props.min)}°</span>
         </p>
       </div>
     );
@@ -37,13 +38,13 @@ export default function WeatherTemperature(props) {
         <span className="exact-temp">{Math.round(fahrenheit)}</span>
         <span className="degrees">
           <a href="/" onClick={convertToCel}>
-            {" "}
-            °C{" "}
+            °C
           </a>
           | °F
         </span>
         <p>
-          {Math.round(max)}°/ {Math.round(min)}°
+          <span> {Math.round(max)}°</span> /{" "}
+          <span className="today-min">{Math.round(min)}°</span>
         </p>
       </div>
     );
