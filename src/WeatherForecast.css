@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.forecast-max {
-  font-weight: 800;
+.forecast-min {
+  opacity: 0.6;
 }
 
 .forecast-day {

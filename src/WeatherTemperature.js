@@ -43,7 +43,7 @@ export default function WeatherTemperature(props) {
           | °F
         </span>
         <p>
-          <strong>{Math.round(max)}°</strong> / {Math.round(min)}°
+          {Math.round(max)}°/ {Math.round(min)}°
         </p>
       </div>
     );
