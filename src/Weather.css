@@ -25,7 +25,7 @@
 
 .search-city {
   position: relative;
-  left: 400px;
+  left: 430px;
   bottom: 79px;
   margin-left: 42px;
 }
@@ -33,19 +33,16 @@
 .search-engine {
   position: relative;
   left: 184px;
-  bottom: 24px;
+  bottom: 26px;
+  color: #7ea7e3;
+  font-size: 23px;
 }
 .col-4 {
   flex: 0 0 auto;
   width: 33.33333333%;
   margin: 0 40px;
 }
-.pin-icon {
-  position: relative;
-  left: 184px;
-  bottom: 24px;
-  font-weight: bolder;
-}
+
 .exact-conditions {
   margin-top: -44px;
 }
