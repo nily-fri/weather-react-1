@@ -58,9 +58,11 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div>
-              <i className="fas fa-search search-engine" />
-            </div>
+            <button>
+              <div>
+                <i className="fas fa-search search-engine" />
+              </div>
+            </button>
           </form>
         </div>
         <WeatherInfo data={weatherData} />

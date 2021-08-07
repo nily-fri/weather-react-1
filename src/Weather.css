@@ -32,10 +32,15 @@
 
 .search-engine {
   position: relative;
-  left: 184px;
+  left: 180px;
   bottom: 26px;
   color: #7ea7e3;
   font-size: 23px;
+}
+
+button {
+  border: none;
+  background-color: white;
 }
 .col-4 {
   flex: 0 0 auto;
